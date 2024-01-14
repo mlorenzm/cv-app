@@ -1,7 +1,4 @@
 export default function Form({ onNameChange, onEmailChange, onPhoneChange }) {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
   const handleNameChange = (e) => {
     onNameChange(e.target.value);
   };
@@ -14,7 +11,7 @@ export default function Form({ onNameChange, onEmailChange, onPhoneChange }) {
   };
 
   return (
-    <form className="flex flex-col" onSubmit={handleSubmit}>
+    <section className="flex flex-col">
       <label>
         Name
         <input
@@ -42,6 +39,6 @@ export default function Form({ onNameChange, onEmailChange, onPhoneChange }) {
           onChange={handlePhoneChange}
         ></input>
       </label>
-    </form>
+    </section>
   );
 }

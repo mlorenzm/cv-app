@@ -1,7 +1,21 @@
-export default function Output({ name, email, phone }) {
+export default function Output({
+  name,
+  email,
+  phone,
+  schoolName,
+  titleStudy,
+  dateStudy,
+}) {
   return (
     <div>
-      {name}, {email}, {phone}
+      <div>
+        {name}, {email}, {phone}
+      </div>
+      <div>
+        {schoolName} <br />
+        {titleStudy} <br />
+        {dateStudy} <br />
+      </div>
     </div>
   );
 }
