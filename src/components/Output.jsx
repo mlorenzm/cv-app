@@ -1,3 +1,7 @@
-export default function Output() {
-  return <div>Output</div>;
+export default function Output({ name, email, phone }) {
+  return (
+    <div>
+      {name}, {email}, {phone}
+    </div>
+  );
 }
