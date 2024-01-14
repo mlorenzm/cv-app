@@ -11,7 +11,8 @@ function App() {
   // Education component State
   const [schoolName, setSchoolName] = useState("");
   const [titleStudy, setTitleStudy] = useState("");
-  const [dateStudy, setDateStudy] = useState("");
+  const [startingDateStudy, setStartingDateStudy] = useState("");
+  const [endingDateStudy, setEndingDateStudy] = useState("");
 
   return (
     <main className="flex flex-row gap-3">
@@ -24,7 +25,8 @@ function App() {
         <Education
           onSchoolNameChange={setSchoolName}
           onTitleStudyChange={setTitleStudy}
-          onDateStudyChange={setDateStudy}
+          onStartingDateStudyChange={setStartingDateStudy}
+          onEndingDateStudyChange={setEndingDateStudy}
         />
       </div>
       <Output
@@ -33,7 +35,8 @@ function App() {
         phone={phone}
         schoolName={schoolName}
         titleStudy={titleStudy}
-        dateStudy={dateStudy}
+        startingDateStudy={startingDateStudy}
+        endingDateStudy={endingDateStudy}
       />
     </main>
   );

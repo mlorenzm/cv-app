@@ -1,7 +1,8 @@
 export default function Education({
   onSchoolNameChange,
   onTitleStudyChange,
-  onDateStudyChange,
+  onStartingDateStudyChange,
+  onEndingDateStudyChange,
 }) {
   const handleSchoolNameChange = (e) => {
     onSchoolNameChange(e.target.value);
@@ -10,8 +11,11 @@ export default function Education({
     onTitleStudyChange(e.target.value);
   };
 
-  const handleDateStudyChange = (e) => {
-    onDateStudyChange(e.target.value);
+  const handleStartingDateStudyChange = (e) => {
+    onStartingDateStudyChange(e.target.value);
+  };
+  const handleEndingDateStudyChange = (e) => {
+    onEndingDateStudyChange(e.target.value);
   };
   return (
     <section className="flex flex-col">
@@ -34,12 +38,21 @@ export default function Education({
         ></input>
       </label>
       <label>
-        Date of Ending
+        Starting date
         <input
           className="ml-2"
-          type="date"
+          type="month"
+          name="startingDateOfStudy"
+          onChange={handleStartingDateStudyChange}
+        ></input>
+      </label>
+      <label>
+        Ending date
+        <input
+          className="ml-2"
+          type="month"
           name="dateOfStudy"
-          onChange={handleDateStudyChange}
+          onChange={handleEndingDateStudyChange}
         ></input>
       </label>
     </section>

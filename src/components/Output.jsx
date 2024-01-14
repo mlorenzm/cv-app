@@ -4,7 +4,8 @@ export default function Output({
   phone,
   schoolName,
   titleStudy,
-  dateStudy,
+  startingDateStudy,
+  endingDateStudy,
 }) {
   return (
     <div>
@@ -14,7 +15,7 @@ export default function Output({
       <div>
         {schoolName} <br />
         {titleStudy} <br />
-        {dateStudy} <br />
+        {startingDateStudy} — {endingDateStudy} <br />
       </div>
     </div>
   );
