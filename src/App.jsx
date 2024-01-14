@@ -1,4 +1,4 @@
-import Form from "./components/Form";
+import GeneralInfo from "./components/GeneralInfo";
 import Output from "./components/Output";
 import { useState } from "react";
 function App() {
@@ -8,7 +8,7 @@ function App() {
 
   return (
     <main className="flex flex-row gap-3">
-      <Form
+      <GeneralInfo
         onNameChange={setName}
         onEmailChange={setEmail}
         onPhoneChange={setPhone}
