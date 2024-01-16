@@ -30,7 +30,6 @@ function App() {
       ...prevState,
       [field]: value,
     }));
-    console.log(education);
   };
 
   return (
