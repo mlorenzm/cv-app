@@ -13,11 +13,11 @@ export default function Education({ onChange }) {
     onChange("endingDateStudy", e.target.value);
   };
   return (
-    <section className="flex flex-col">
+    <section className="flex flex-col gap-1">
       <label>
         School Name
         <input
-          className="ml-2"
+          className="ml-2 shadow-md rounded px-1 py-1"
           type="text"
           name="schoolName"
           onChange={handleSchoolNameChange}
@@ -26,7 +26,7 @@ export default function Education({ onChange }) {
       <label>
         Title of Study
         <input
-          className="ml-2"
+          className="ml-2 shadow-md rounded px-1 py-1"
           type="email"
           name="email"
           onChange={handleTitleStudyChange}
@@ -35,7 +35,7 @@ export default function Education({ onChange }) {
       <label>
         Starting date
         <input
-          className="ml-2"
+          className="ml-2 shadow-md rounded px-1 py-1"
           type="month"
           name="startingDateOfStudy"
           onChange={handleStartingDateStudyChange}
@@ -44,7 +44,7 @@ export default function Education({ onChange }) {
       <label>
         Ending date
         <input
-          className="ml-2"
+          className="ml-2 shadow-md rounded px-1 py-1"
           type="month"
           name="dateOfStudy"
           onChange={handleEndingDateStudyChange}
