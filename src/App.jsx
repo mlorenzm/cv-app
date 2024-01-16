@@ -8,6 +8,20 @@ function App() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
 
+  const [generalInfo, setGeneralInfo] = useState({
+    name: "",
+    email: "",
+    phone: "",
+  });
+
+  const handleGeneralInfoChange = (field, value) => {
+    setGeneralInfo((prevState) => ({
+      ...prevState,
+      [field]: value,
+    }));
+    console.log(generalInfo);
+  };
+
   // Education component State
   const [schoolName, setSchoolName] = useState("");
   const [titleStudy, setTitleStudy] = useState("");
@@ -17,11 +31,7 @@ function App() {
   return (
     <main className="flex flex-row gap-3">
       <div>
-        <GeneralInfo
-          onNameChange={setName}
-          onEmailChange={setEmail}
-          onPhoneChange={setPhone}
-        />
+        <GeneralInfo onChange={handleGeneralInfoChange} />
         <Education
           onSchoolNameChange={setSchoolName}
           onTitleStudyChange={setTitleStudy}
@@ -29,15 +39,7 @@ function App() {
           onEndingDateStudyChange={setEndingDateStudy}
         />
       </div>
-      <Output
-        name={name}
-        email={email}
-        phone={phone}
-        schoolName={schoolName}
-        titleStudy={titleStudy}
-        startingDateStudy={startingDateStudy}
-        endingDateStudy={endingDateStudy}
-      />
+      <Output {...generalInfo} />
     </main>
   );
 }

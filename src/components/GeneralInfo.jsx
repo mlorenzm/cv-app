@@ -1,13 +1,13 @@
-export default function Form({ onNameChange, onEmailChange, onPhoneChange }) {
+export default function GeneralInfo({ onChange }) {
   const handleNameChange = (e) => {
-    onNameChange(e.target.value);
+    onChange("name", e.target.value);
   };
   const handleEmailChange = (e) => {
-    onEmailChange(e.target.value);
+    onChange("email", e.target.value);
   };
 
   const handlePhoneChange = (e) => {
-    onPhoneChange(e.target.value);
+    onChange("phone", e.target.value);
   };
 
   return (
