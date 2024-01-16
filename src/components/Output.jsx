@@ -13,15 +13,19 @@ export default function Output({
   endingDateJob,
 }) {
   return (
-    <div className="border shadow-md flex-1 px-4 py-8">
-      <div>
+    <div className="border shadow-md flex flex-col gap-10  w-3/4">
+      <header className="flex content-center flex-col bg-slate-700 text-white px-4 py-8 gap-3 items-center">
         <h1 className="text-3xl font-semibold text-center">{name}</h1>
-        {email} <br />
-        {phone}
-      </div>
+        <div className="text-center text-xl flex gap-10">
+          <div>{email}</div>
+          <div>{phone}</div>
+        </div>
+      </header>
       <div>
-        <h2 className="text-2xl font-semibold text-center">Education</h2>
-        <div className="flex flex-row gap-5">
+        <h2 className="text-2xl font-semibold text-center bg-slate-100">
+          Education
+        </h2>
+        <div className="flex flex-row gap-5 mt-2 mx-4">
           {startingDateStudy} — {endingDateStudy}
           <div>
             <div className="font-semibold">{schoolName}</div>
@@ -30,15 +34,21 @@ export default function Output({
         </div>
       </div>
       <div>
-        <h2 className="text-2xl font-semibold text-center">
+        <h2 className="text-2xl font-semibold text-center bg-slate-100">
           Relevant work experience
         </h2>
-        <div className="flex flex-row gap-5">
+        <div className="flex flex-row gap-5 mt-2 mx-4">
           {startingDateJob} — {endingDateJob} <br />
           <div>
-            {companyName}
-            {position}
-            {responsability}
+            <div className="font-semibold">
+              {companyName} <br />
+            </div>
+            <div className=" break-words ">
+              {position} <br />
+            </div>
+            <div className=" break-all max-w-[100%]">
+              {responsability} <br />
+            </div>
           </div>
         </div>
       </div>

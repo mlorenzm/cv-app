@@ -24,6 +24,7 @@ export default function Experience({ onChange }) {
           type="text"
           name="name"
           onChange={handleCompanyNameChange}
+          placeholder="Company"
         ></input>
       </label>
       <label>
@@ -33,16 +34,18 @@ export default function Experience({ onChange }) {
           type="email"
           name="email"
           onChange={handlePositionTitleChange}
+          placeholder="Position"
         ></input>
       </label>
       <label>
         Responsabilities for the job
-        <input
+        <textarea
           className="ml-2 shadow-md rounded px-1 py-1"
           type="tel"
           name="phone"
           onChange={handleResponsabilityChange}
-        ></input>
+          placeholder="Responsabilities"
+        ></textarea>
       </label>
       <label>
         Starting date at company

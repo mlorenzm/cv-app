@@ -21,6 +21,7 @@ export default function Education({ onChange }) {
           type="text"
           name="schoolName"
           onChange={handleSchoolNameChange}
+          placeholder="Universidad de La Laguna"
         ></input>
       </label>
       <label>
@@ -30,6 +31,7 @@ export default function Education({ onChange }) {
           type="email"
           name="email"
           onChange={handleTitleStudyChange}
+          placeholder="Biology BSc."
         ></input>
       </label>
       <label>
@@ -39,6 +41,7 @@ export default function Education({ onChange }) {
           type="month"
           name="startingDateOfStudy"
           onChange={handleStartingDateStudyChange}
+          placeholder="2015-9"
         ></input>
       </label>
       <label>
@@ -48,6 +51,7 @@ export default function Education({ onChange }) {
           type="month"
           name="dateOfStudy"
           onChange={handleEndingDateStudyChange}
+          placeholder="2019-6"
         ></input>
       </label>
     </section>

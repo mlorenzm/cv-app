@@ -19,6 +19,7 @@ export default function GeneralInfo({ onChange }) {
           type="text"
           name="name"
           onChange={handleNameChange}
+          placeholder="Mauro Lorenzo"
         ></input>
       </label>
       <label>
@@ -28,6 +29,7 @@ export default function GeneralInfo({ onChange }) {
           type="email"
           name="email"
           onChange={handleEmailChange}
+          placeholder="mlorenzo@example.com"
         ></input>
       </label>
       <label>
@@ -37,6 +39,7 @@ export default function GeneralInfo({ onChange }) {
           type="tel"
           name="phone"
           onChange={handlePhoneChange}
+          placeholder="922928000"
         ></input>
       </label>
     </section>
