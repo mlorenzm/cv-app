@@ -1,21 +1,16 @@
-export default function Education({
-  onSchoolNameChange,
-  onTitleStudyChange,
-  onStartingDateStudyChange,
-  onEndingDateStudyChange,
-}) {
+export default function Education({ onChange }) {
   const handleSchoolNameChange = (e) => {
-    onSchoolNameChange(e.target.value);
+    onChange("schoolName", e.target.value);
   };
   const handleTitleStudyChange = (e) => {
-    onTitleStudyChange(e.target.value);
+    onChange("titleStudy", e.target.value);
   };
 
   const handleStartingDateStudyChange = (e) => {
-    onStartingDateStudyChange(e.target.value);
+    onChange("startingDateStudy", e.target.value);
   };
   const handleEndingDateStudyChange = (e) => {
-    onEndingDateStudyChange(e.target.value);
+    onChange("endingDateStudy", e.target.value);
   };
   return (
     <section className="flex flex-col">

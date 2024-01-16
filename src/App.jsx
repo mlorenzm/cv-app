@@ -4,10 +4,6 @@ import Output from "./components/Output";
 import { useState } from "react";
 function App() {
   // GeneralInfo component State
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-
   const [generalInfo, setGeneralInfo] = useState({
     name: "",
     email: "",
@@ -19,27 +15,31 @@ function App() {
       ...prevState,
       [field]: value,
     }));
-    console.log(generalInfo);
   };
 
   // Education component State
-  const [schoolName, setSchoolName] = useState("");
-  const [titleStudy, setTitleStudy] = useState("");
-  const [startingDateStudy, setStartingDateStudy] = useState("");
-  const [endingDateStudy, setEndingDateStudy] = useState("");
+  const [education, setEducation] = useState({
+    schoolName: "",
+    titleStudy: "",
+    startingDateStudy: "",
+    endingDateStudy: "",
+  });
+
+  const handleEducationChange = (field, value) => {
+    setEducation((prevState) => ({
+      ...prevState,
+      [field]: value,
+    }));
+    console.log(education);
+  };
 
   return (
     <main className="flex flex-row gap-3">
       <div>
         <GeneralInfo onChange={handleGeneralInfoChange} />
-        <Education
-          onSchoolNameChange={setSchoolName}
-          onTitleStudyChange={setTitleStudy}
-          onStartingDateStudyChange={setStartingDateStudy}
-          onEndingDateStudyChange={setEndingDateStudy}
-        />
+        <Education onChange={handleEducationChange} />
       </div>
-      <Output {...generalInfo} />
+      <Output {...generalInfo} {...education} />
     </main>
   );
 }
