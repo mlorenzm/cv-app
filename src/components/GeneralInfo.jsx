@@ -1,3 +1,5 @@
+import Input from "../Input";
+
 export default function GeneralInfo({ onChange }) {
   const handleNameChange = (e) => {
     onChange("name", e.target.value);
@@ -14,33 +16,30 @@ export default function GeneralInfo({ onChange }) {
     <section className="flex flex-col gap-1">
       <label>
         Name
-        <input
-          className="ml-2 shadow-md rounded px-1 py-1"
+        <Input
           type="text"
           name="name"
           onChange={handleNameChange}
           placeholder="Mauro Lorenzo"
-        ></input>
+        />
       </label>
       <label>
         e-mail
-        <input
-          className="ml-2 shadow-md rounded px-1 py-1"
+        <Input
           type="email"
           name="email"
           onChange={handleEmailChange}
           placeholder="mlorenzo@example.com"
-        ></input>
+        />
       </label>
       <label>
         Phone number
-        <input
-          className="ml-2 shadow-md rounded px-1 py-1"
+        <Input
           type="tel"
           name="phone"
           onChange={handlePhoneChange}
           placeholder="922928000"
-        ></input>
+        />
       </label>
     </section>
   );

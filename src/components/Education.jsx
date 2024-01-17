@@ -1,3 +1,5 @@
+import Input from "../Input";
+
 export default function Education({ onChange }) {
   const handleSchoolNameChange = (e) => {
     onChange("schoolName", e.target.value);
@@ -16,43 +18,40 @@ export default function Education({ onChange }) {
     <section className="flex flex-col gap-1">
       <label>
         School Name
-        <input
-          className="ml-2 shadow-md rounded px-1 py-1"
+        <Input
           type="text"
           name="schoolName"
           onChange={handleSchoolNameChange}
           placeholder="Universidad de La Laguna"
-        ></input>
+        />
       </label>
       <label>
         Title of Study
-        <input
+        <Input
           className="ml-2 shadow-md rounded px-1 py-1"
           type="email"
           name="email"
           onChange={handleTitleStudyChange}
           placeholder="Biology BSc."
-        ></input>
+        />
       </label>
       <label>
         Starting date
-        <input
-          className="ml-2 shadow-md rounded px-1 py-1"
+        <Input
           type="month"
           name="startingDateOfStudy"
           onChange={handleStartingDateStudyChange}
           placeholder="2015-9"
-        ></input>
+        />
       </label>
       <label>
         Ending date
-        <input
-          className="ml-2 shadow-md rounded px-1 py-1"
+        <Input
           type="month"
           name="dateOfStudy"
           onChange={handleEndingDateStudyChange}
           placeholder="2019-6"
-        ></input>
+        />
       </label>
     </section>
   );

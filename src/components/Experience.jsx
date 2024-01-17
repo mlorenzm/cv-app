@@ -1,3 +1,4 @@
+import Input from "../Input";
 export default function Experience({ onChange }) {
   const handleCompanyNameChange = (e) => {
     onChange("companyName", e.target.value);
@@ -19,51 +20,48 @@ export default function Experience({ onChange }) {
     <section className="flex flex-col gap-1">
       <label>
         Company name
-        <input
-          className="ml-2 shadow-md rounded px-1 py-1"
+        <Input
           type="text"
           name="name"
           onChange={handleCompanyNameChange}
           placeholder="Company"
-        ></input>
+        />
       </label>
       <label>
         Position title
-        <input
-          className="ml-2 shadow-md rounded px-1 py-1"
+        <Input
           type="email"
           name="email"
           onChange={handlePositionTitleChange}
           placeholder="Position"
-        ></input>
+        />
       </label>
       <label>
         Responsabilities for the job
-        <textarea
+        <Input
           className="ml-2 shadow-md rounded px-1 py-1"
-          type="tel"
+          type="text"
+          textArea={true}
           name="phone"
           onChange={handleResponsabilityChange}
           placeholder="Responsabilities"
-        ></textarea>
+        />
       </label>
       <label>
         Starting date at company
-        <input
-          className="ml-2 shadow-md rounded px-1 py-1"
+        <Input
           type="month"
           name="startingDateOfStudy"
           onChange={handleStartingDateJobChange}
-        ></input>
+        />
       </label>
       <label>
         Ending date at company
-        <input
-          className="ml-2 shadow-md rounded px-1 py-1"
+        <Input
           type="month"
           name="dateOfStudy"
           onChange={handleEndingDateJobChange}
-        ></input>
+        />
       </label>
     </section>
   );
