@@ -13,7 +13,7 @@ export default function Output({
   endingDateJob,
 }) {
   return (
-    <div className="border shadow-md flex flex-col gap-10  w-3/4">
+    <div className="border shadow-md w-[1024px]">
       <header className="flex content-center flex-col bg-slate-700 text-white px-4 py-8 gap-3 items-center">
         <h1 className="text-3xl font-semibold text-center">{name}</h1>
         <div className="text-center text-xl flex gap-10">
@@ -21,8 +21,8 @@ export default function Output({
           <div>{phone}</div>
         </div>
       </header>
-      <div>
-        <h2 className="text-2xl font-semibold text-center bg-slate-100">
+      <div className="mb-5">
+        <h2 className="text-2xl font-semibold text-center bg-slate-100 py-1">
           Education
         </h2>
         <div className="flex flex-row gap-5 mt-2 mx-4">
@@ -34,8 +34,8 @@ export default function Output({
         </div>
       </div>
       <div>
-        <h2 className="text-2xl font-semibold text-center bg-slate-100">
-          Relevant work experience
+        <h2 className="text-2xl font-semibold text-center bg-slate-100 py-1">
+          Work experience
         </h2>
         <div className="flex flex-row gap-5 mt-2 mx-4">
           {startingDateJob} — {endingDateJob} <br />

@@ -50,18 +50,21 @@ function App() {
     }));
   };
   return (
-    <main className="grid place-items-center w-screen">
-      <div className="flex gap-12">
-        <div className="flex flex-col gap-6">
-          <h2 className="text-xl font-semibold">General information</h2>
-          <GeneralInfo onChange={handleGeneralInfoChange} />
-          <h2 className="text-xl font-semibold">Education</h2>
-          <Education onChange={handleEducationChange} />
-          <h2 className="text-xl font-semibold">Relevant experience</h2>
-          <Experience onChange={handleExperienceChange} />
-        </div>
-        <Output {...generalInfo} {...education} {...experience} />
+    <main className="flex flex-row gap-12 m-6">
+      <div className="flex flex-col gap-6 flex-1 ml-8">
+        <h2 className="text-xl font-semibold">General information</h2>
+        <GeneralInfo onChange={handleGeneralInfoChange} />
+        <h2 className="text-xl font-semibold">Education</h2>
+        <Education onChange={handleEducationChange} />
+        <h2 className="text-xl font-semibold">Relevant experience</h2>
+        <Experience onChange={handleExperienceChange} />
       </div>
+      <Output
+        {...generalInfo}
+        {...education}
+        {...experience}
+        className="flex-1"
+      />
     </main>
   );
 }

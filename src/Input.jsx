@@ -8,7 +8,7 @@ export default function Input({
   if (textArea) {
     return (
       <textarea
-        className="border-1 block h-12 w-full rounded-md border border-double border-slate-800 border-transparent bg-slate-50	bg-origin-border px-3 py-2 text-slate-800 transition-all duration-500 [background-clip:padding-box,_border-box] placeholder:text-slate-500"
+        className="border-1 block h-20 w-full rounded-md border border-double border-slate-800 border-transparent bg-slate-50 bg-origin-border px-3 py-2 text-slate-800 transition-all duration-500 [background-clip:padding-box,_border-box] placeholder:text-slate-500"
         type={type}
         name={name}
         onChange={onChange}
@@ -18,7 +18,7 @@ export default function Input({
   } else {
     return (
       <input
-        className="border-1 block h-12 w-full rounded-md border border-double border-slate-800 border-transparent bg-slate-50	bg-origin-border px-3 py-2 text-slate-800 transition-all duration-500 [background-clip:padding-box,_border-box] placeholder:text-slate-500"
+        className="border-1 block h-9 w-full rounded-md border border-double border-slate-800 border-transparent bg-slate-50	bg-origin-border px-3 py-2 text-slate-800 transition-all duration-500 [background-clip:padding-box,_border-box] placeholder:text-slate-500"
         type={type}
         name={name}
         onChange={onChange}
