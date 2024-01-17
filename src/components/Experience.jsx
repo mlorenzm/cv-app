@@ -39,7 +39,6 @@ export default function Experience({ onChange }) {
       <label>
         Responsabilities for the job
         <Input
-          className="ml-2 shadow-md rounded px-1 py-1"
           type="text"
           textArea={true}
           name="phone"

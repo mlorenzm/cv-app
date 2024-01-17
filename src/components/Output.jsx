@@ -26,7 +26,9 @@ export default function Output({
           Education
         </h2>
         <div className="flex flex-row gap-5 mt-2 mx-4">
-          {startingDateStudy} — {endingDateStudy}
+          <div className="flex-shrink-0">
+            {startingDateStudy} — {endingDateStudy}
+          </div>
           <div>
             <div className="font-semibold">{schoolName}</div>
             {titleStudy}
@@ -38,17 +40,13 @@ export default function Output({
           Work experience
         </h2>
         <div className="flex flex-row gap-5 mt-2 mx-4">
-          {startingDateJob} — {endingDateJob} <br />
-          <div>
-            <div className="font-semibold">
-              {companyName} <br />
-            </div>
-            <div className=" break-words ">
-              {position} <br />
-            </div>
-            <div className=" break-all max-w-[100%]">
-              {responsability} <br />
-            </div>
+          <div className="flex-shrink-0">
+            {startingDateJob} — {endingDateJob}
+          </div>
+          <div className="flex-grow-0">
+            <div className="font-semibold">{companyName}</div>
+            <div className=" break-words ">{position}</div>
+            <div className=" break-all max-w-[100%] ">{responsability}</div>
           </div>
         </div>
       </div>
